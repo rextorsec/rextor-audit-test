@@ -2,6 +2,7 @@
 pragma solidity ^0.8.24;
 
 /// @title Deliberately vulnerable demo fixture — NOT for production. Ground truth for pipeline tests.
+// T10 Phase C live run: attestation + fork-sim trigger
 contract Vault {
     mapping(address => uint256) public deposits;
     address public owner;
