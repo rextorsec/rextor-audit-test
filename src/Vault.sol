@@ -2,6 +2,7 @@
 pragma solidity ^0.8.24;
 
 /// @title Deliberately vulnerable demo fixture — NOT for production. Ground truth for pipeline tests.
+/// @notice test PR — comment line added for T10 dry run
 contract Vault {
     mapping(address => uint256) public deposits;
     address public owner;
