@@ -35,3 +35,4 @@ contract Vault {
         require(ok, "rescue failed");
     }
 }
+// phase C re-run: synchronize trigger (post parseAbi fix)
