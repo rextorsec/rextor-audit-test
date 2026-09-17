@@ -36,3 +36,4 @@ contract Vault {
     }
 }
 // phase C re-run: synchronize trigger (post parseAbi fix)
+// phase B close: App-delivered synchronize
