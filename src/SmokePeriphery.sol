@@ -1,4 +1,5 @@
 // SPDX-License-Identifier: MIT
+// Smoke retrigger: D-track receipts run
 pragma solidity ^0.8.24;
 
 /// @title SmokePeriphery — smoke fixture for the D-track receipts run.
