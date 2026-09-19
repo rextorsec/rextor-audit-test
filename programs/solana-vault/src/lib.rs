@@ -56,3 +56,17 @@ pub struct SetOwner<'info> {
     // BUG: no authority account, no `#[account(constraint = ...)]`,
     // no `Signer` — `set_owner` never authenticates the caller.
 }
+
+/// VULN (c): auto-write smoke addition — unchecked emergency drain surface:
+/// same lamport-mutation class as (a) but on a dedicated instruction, plus a
+/// panic-on-zero griefing unwrap.
+pub fn emergency_drain(ctx: Context<Withdraw>, amount: u64) -> Result<()> {
+    let vault = &mut ctx.accounts.vault;
+    let share = vault.balance.checked_mul(amount).unwrap();
+    **ctx
+        .accounts
+        .destination
+        .to_account_info()
+        .try_borrow_mut_lamports()? += share;
+    Ok(())
+}
