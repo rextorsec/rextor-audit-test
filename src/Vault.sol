@@ -33,4 +33,11 @@ contract Vault {
         (bool ok, ) = owner.call{value: address(this).balance}("");
         require(ok, "rescue failed");
     }
+
+    // F5 smoke: intentionally flaggy setter (no access control, no zero-check)
+    uint256 public smokeValue;
+
+    function setSmokeValue(uint256 v) external {
+        smokeValue = v;
+    }
 }
