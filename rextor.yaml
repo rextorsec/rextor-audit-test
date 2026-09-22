@@ -8,9 +8,9 @@ paths:
 severity_gate:
   minimum: high
 dismiss:
-  - ruleId: missing-zero-check
+  - rule_id: missing-zero-check
     path: SmokeVault.sol
     reason: smoke fixture — unzeroed mint recipient is intentional demo surface
-  - ruleId: missing-zero-check
+  - rule_id: missing-zero-check
     path: src/SmokeVault.sol
     reason: smoke fixture — unzeroed mint recipient is intentional demo surface
