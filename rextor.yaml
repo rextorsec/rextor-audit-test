@@ -1,0 +1,16 @@
+# rextor-audit repo config — trusted channel: base branch only (SPEC-7 §1).
+# Smoke: exercises severity gate (minimum: high) + dismissals store sync (D4).
+# The missing-zero-check on the mint recipient is intentional fixture surface;
+# it is dismissed from the GATE only — it stays visible in the comment + score.
+paths:
+  ignore:
+    - "test/**"
+severity_gate:
+  minimum: high
+dismiss:
+  - ruleId: missing-zero-check
+    path: SmokeVault.sol
+    reason: smoke fixture — unzeroed mint recipient is intentional demo surface
+  - ruleId: missing-zero-check
+    path: src/SmokeVault.sol
+    reason: smoke fixture — unzeroed mint recipient is intentional demo surface
