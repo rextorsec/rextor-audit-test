@@ -33,3 +33,4 @@ contract PaymentPool {
 }
 
 // payout ceiling: single-beneficiary pool
+// receipt run: auto-feedback verification
