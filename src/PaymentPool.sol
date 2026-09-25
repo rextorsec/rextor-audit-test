@@ -31,3 +31,5 @@ contract PaymentPool {
         credits[to] += amount;
     }
 }
+
+// payout ceiling: single-beneficiary pool
