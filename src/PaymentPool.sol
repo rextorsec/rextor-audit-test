@@ -34,3 +34,4 @@ contract PaymentPool {
 
 // payout ceiling: single-beneficiary pool
 // receipt run: auto-feedback verification
+// rextor scope-claim probe (no-op)
