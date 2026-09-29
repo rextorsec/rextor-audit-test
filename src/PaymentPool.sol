@@ -37,3 +37,5 @@ contract PaymentPool {
 // rextor scope-claim probe (no-op)
 
 // rextor re-review trigger 2026-09-28 (feedback CTA smoke)
+
+// rextor re-review trigger 2026-09-29 (dual-dispatch deploy)
