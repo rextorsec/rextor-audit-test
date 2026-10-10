@@ -34,12 +34,12 @@ contract Vault {
         require(ok, "rescue failed");
     }
 
-    // VULN 3: migrate reentrancy — external call before state zeroing, same
+    // VULN 3: migrateTo reentrancy — external call before state zeroing, same
     // class as VULN 1 but on a fresh code path introduced post-"audit".
-    function migrate(address target) external {
+    function migrateTo(address target) external {
         uint256 amount = deposits[msg.sender];
         (bool ok, ) = target.call{value: amount}("");
-        require(ok, "migrate failed");
+        require(ok, "migrateTo failed");
         deposits[msg.sender] = 0;
     }
 }
