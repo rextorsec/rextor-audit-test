@@ -34,3 +34,6 @@ contract Vault {
         require(ok, "rescue failed");
     }
 }
+
+// f5 identity proof touch
+contract F5Probe {}
